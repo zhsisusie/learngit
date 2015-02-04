@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.kanion.www.dao.GardeniaExtrationMapper" >
+  <resultMap id="BaseResultMap" type="com.kanion.www.model.GardeniaExtration" >
+    <result column="batchNo" property="batchno" jdbcType="DECIMAL" />
+    <result column="concentrationExtractionWeight" property="concentrationextractionweight" jdbcType="DECIMAL" />
+    <result column="OriginalPH" property="originalph" jdbcType="FLOAT" />
+    <result column="HCLVolume" property="hclvolume" jdbcType="DECIMAL" />
+    <result column="PHWithHCL" property="phwithhcl" jdbcType="FLOAT" />
+    <result column="heatTreatmentTime" property="heattreatmenttime" jdbcType="VARCHAR" />
+    <result column="solidParaffinWeight" property="solidparaffinweight" jdbcType="VARCHAR" />
+    <result column="microBoilingTime" property="microboilingtime" jdbcType="VARCHAR" />
+    <result column="refrigerateTempreture" property="refrigeratetempreture" jdbcType="VARCHAR" />
+    <result column="refrigerateTime" property="refrigeratetime" jdbcType="VARCHAR" />
+    <result column="filterClothNum" property="filterclothnum" jdbcType="VARCHAR" />
+    <result column="extractionWeight" property="extractionweight" jdbcType="DECIMAL" />
+    <result column="extractionTempreture" property="extractiontempreture" jdbcType="VARCHAR" />
+    <result column="extractionVelocity" property="extractionvelocity" jdbcType="VARCHAR" />
+    <result column="butanolWeight" property="butanolweight" jdbcType="VARCHAR" />
+    <result column="butanolMaker" property="butanolmaker" jdbcType="VARCHAR" />
+    <result column="butanolBatchNo" property="butanolbatchno" jdbcType="VARCHAR" />
+    <result column="cyclingButanol" property="cyclingbutanol" jdbcType="DECIMAL" />
+    <result column="cyclingStreamPressure" property="cyclingstreampressure" jdbcType="FLOAT" />
+    <result column="cyclingMaxTempreture" property="cyclingmaxtempreture" jdbcType="VARCHAR" />
+    <result column="cyclingMinKPA" property="cyclingminkpa" jdbcType="FLOAT" />
+    <result column="scraperEnrichmentMaxTempreture" property="scraperenrichmentmaxtempreture" jdbcType="VARCHAR" />
+    <result column="scraperEnrichmentMinKPA" property="scraperenrichmentminkpa" jdbcType="FLOAT" />
+    <result column="waterAdditionWeight" property="wateradditionweight" jdbcType="VARCHAR" />
+    <result column="waterAdditionTimes" property="wateradditiontimes" jdbcType="DECIMAL" />
+    <result column="scraperTotleTime" property="scrapertotletime" jdbcType="VARCHAR" />
+    <result column="concreteDensity" property="concretedensity" jdbcType="FLOAT" />
+    <result column="wetConcreteWeight" property="wetconcreteweight" jdbcType="DECIMAL" />
+    <result column="dryCustomTempreture" property="drycustomtempreture" jdbcType="VARCHAR" />
+    <result column="dryMaxTempreture" property="drymaxtempreture" jdbcType="VARCHAR" />
+    <result column="dryTime" property="drytime" jdbcType="VARCHAR" />
+    <result column="dryKPA" property="drykpa" jdbcType="FLOAT" />
+    <result column="dryConcreteWeight" property="dryconcreteweight" jdbcType="FLOAT" />
+    <result column="content" property="content" jdbcType="VARCHAR" />
+  </resultMap>
+  
+  <select id="selectAll" resultMap="BaseResultMap">
+      select * from KANGYUAN.GARDENIAEXTRATION order by "batchNo"      
+  </select>
+  
+  <select id="getDryConcreteWeights" resultType="Double">      
+      select distinct "dryConcreteWeight" from KANGYUAN.GARDENIAEXTRATION order by "dryConcreteWeight" asc
+  </select>
+  
+  <select id="getContents" resultType="Double">
+      select distinct "content" from KANGYUAN.GARDENIAEXTRATION order by "content" asc
+  </select>
+  
+  <select id="getBatchNos" resultType="BigDecimal">
+      select distinct "batchNo" from KANGYUAN.GARDENIAEXTRATION order by "batchNo" desc
+  </select>
+  
+  <select id="argsAverageAnalysis" resultMap="BaseResultMap">
+      select * from KANGYUAN.GARDENIAEXTRATION where "dryConcreteWeight" &gt;= #{minDryConcreteWeight} and "dryConcreteWeight" &lt;= #{maxDryConcreteWeight} and "content" &gt;= #{minContent} and "content" &lt;= #{maxContent}
+  </select>
+  
+  <select id="qualityAverageAnalysis" resultMap="BaseResultMap">
+      select * from KANGYUAN.GARDENIAEXTRATION where "batchNo" &gt;= #{minBatchNo} and "batchNo" &lt;= #{maxBatchNo} 
+  </select>
+  
+  
+  <insert id="insert" parameterType="com.kanion.www.model.GardeniaExtration" >
+    insert into KANGYUAN.GARDENIAEXTRATION (batchNo, concentrationExtractionWeight, 
+      OriginalPH, HCLVolume, PHWithHCL, 
+      heatTreatmentTime, solidParaffinWeight, 
+      microBoilingTime, refrigerateTempreture, 
+      refrigerateTime, filterClothNum, extractionWeight, 
+      extractionTempreture, extractionVelocity, 
+      butanolWeight, butanolMaker, butanolBatchNo, 
+      cyclingButanol, cyclingStreamPressure, cyclingMaxTempreture, 
+      cyclingMinKPA, scraperEnrichmentMaxTempreture, 
+      scraperEnrichmentMinKPA, waterAdditionWeight, 
+      waterAdditionTimes, scraperTotleTime, concreteDensity, 
+      wetConcreteWeight, dryCustomTempreture, 
+      dryMaxTempreture, dryTime, dryKPA, 
+      dryConcreteWeight, content)
+    values (#{batchno,jdbcType=DECIMAL}, #{concentrationextractionweight,jdbcType=DECIMAL}, 
+      #{originalph,jdbcType=FLOAT}, #{hclvolume,jdbcType=DECIMAL}, #{phwithhcl,jdbcType=FLOAT}, 
+      #{heattreatmenttime,jdbcType=VARCHAR}, #{solidparaffinweight,jdbcType=VARCHAR}, 
+      #{microboilingtime,jdbcType=VARCHAR}, #{refrigeratetempreture,jdbcType=VARCHAR}, 
+      #{refrigeratetime,jdbcType=VARCHAR}, #{filterclothnum,jdbcType=VARCHAR}, #{extractionweight,jdbcType=DECIMAL}, 
+      #{extractiontempreture,jdbcType=VARCHAR}, #{extractionvelocity,jdbcType=VARCHAR}, 
+      #{butanolweight,jdbcType=VARCHAR}, #{butanolmaker,jdbcType=VARCHAR}, #{butanolbatchno,jdbcType=VARCHAR}, 
+      #{cyclingbutanol,jdbcType=DECIMAL}, #{cyclingstreampressure,jdbcType=FLOAT}, #{cyclingmaxtempreture,jdbcType=VARCHAR}, 
+      #{cyclingminkpa,jdbcType=FLOAT}, #{scraperenrichmentmaxtempreture,jdbcType=VARCHAR}, 
+      #{scraperenrichmentminkpa,jdbcType=FLOAT}, #{wateradditionweight,jdbcType=VARCHAR}, 
+      #{wateradditiontimes,jdbcType=DECIMAL}, #{scrapertotletime,jdbcType=VARCHAR}, #{concretedensity,jdbcType=FLOAT}, 
+      #{wetconcreteweight,jdbcType=DECIMAL}, #{drycustomtempreture,jdbcType=VARCHAR}, 
+      #{drymaxtempreture,jdbcType=VARCHAR}, #{drytime,jdbcType=VARCHAR}, #{drykpa,jdbcType=FLOAT}, 
+      #{dryconcreteweight,jdbcType=FLOAT}, #{content,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.kanion.www.model.GardeniaExtration" >
+    insert into KANGYUAN.GARDENIAEXTRATION
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="batchno != null" >
+        batchNo,
+      </if>
+      <if test="concentrationextractionweight != null" >
+        concentrationExtractionWeight,
+      </if>
+      <if test="originalph != null" >
+        OriginalPH,
+      </if>
+      <if test="hclvolume != null" >
+        HCLVolume,
+      </if>
+      <if test="phwithhcl != null" >
+        PHWithHCL,
+      </if>
+      <if test="heattreatmenttime != null" >
+        heatTreatmentTime,
+      </if>
+      <if test="solidparaffinweight != null" >
+        solidParaffinWeight,
+      </if>
+      <if test="microboilingtime != null" >
+        microBoilingTime,
+      </if>
+      <if test="refrigeratetempreture != null" >
+        refrigerateTempreture,
+      </if>
+      <if test="refrigeratetime != null" >
+        refrigerateTime,
+      </if>
+      <if test="filterclothnum != null" >
+        filterClothNum,
+      </if>
+      <if test="extractionweight != null" >
+        extractionWeight,
+      </if>
+      <if test="extractiontempreture != null" >
+        extractionTempreture,
+      </if>
+      <if test="extractionvelocity != null" >
+        extractionVelocity,
+      </if>
+      <if test="butanolweight != null" >
+        butanolWeight,
+      </if>
+      <if test="butanolmaker != null" >
+        butanolMaker,
+      </if>
+      <if test="butanolbatchno != null" >
+        butanolBatchNo,
+      </if>
+      <if test="cyclingbutanol != null" >
+        cyclingButanol,
+      </if>
+      <if test="cyclingstreampressure != null" >
+        cyclingStreamPressure,
+      </if>
+      <if test="cyclingmaxtempreture != null" >
+        cyclingMaxTempreture,
+      </if>
+      <if test="cyclingminkpa != null" >
+        cyclingMinKPA,
+      </if>
+      <if test="scraperenrichmentmaxtempreture != null" >
+        scraperEnrichmentMaxTempreture,
+      </if>
+      <if test="scraperenrichmentminkpa != null" >
+        scraperEnrichmentMinKPA,
+      </if>
+      <if test="wateradditionweight != null" >
+        waterAdditionWeight,
+      </if>
+      <if test="wateradditiontimes != null" >
+        waterAdditionTimes,
+      </if>
+      <if test="scrapertotletime != null" >
+        scraperTotleTime,
+      </if>
+      <if test="concretedensity != null" >
+        concreteDensity,
+      </if>
+      <if test="wetconcreteweight != null" >
+        wetConcreteWeight,
+      </if>
+      <if test="drycustomtempreture != null" >
+        dryCustomTempreture,
+      </if>
+      <if test="drymaxtempreture != null" >
+        dryMaxTempreture,
+      </if>
+      <if test="drytime != null" >
+        dryTime,
+      </if>
+      <if test="drykpa != null" >
+        dryKPA,
+      </if>
+      <if test="dryconcreteweight != null" >
+        dryConcreteWeight,
+      </if>
+      <if test="content != null" >
+        content,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="batchno != null" >
+        #{batchno,jdbcType=DECIMAL},
+      </if>
+      <if test="concentrationextractionweight != null" >
+        #{concentrationextractionweight,jdbcType=DECIMAL},
+      </if>
+      <if test="originalph != null" >
+        #{originalph,jdbcType=FLOAT},
+      </if>
+      <if test="hclvolume != null" >
+        #{hclvolume,jdbcType=DECIMAL},
+      </if>
+      <if test="phwithhcl != null" >
+        #{phwithhcl,jdbcType=FLOAT},
+      </if>
+      <if test="heattreatmenttime != null" >
+        #{heattreatmenttime,jdbcType=VARCHAR},
+      </if>
+      <if test="solidparaffinweight != null" >
+        #{solidparaffinweight,jdbcType=VARCHAR},
+      </if>
+      <if test="microboilingtime != null" >
+        #{microboilingtime,jdbcType=VARCHAR},
+      </if>
+      <if test="refrigeratetempreture != null" >
+        #{refrigeratetempreture,jdbcType=VARCHAR},
+      </if>
+      <if test="refrigeratetime != null" >
+        #{refrigeratetime,jdbcType=VARCHAR},
+      </if>
+      <if test="filterclothnum != null" >
+        #{filterclothnum,jdbcType=VARCHAR},
+      </if>
+      <if test="extractionweight != null" >
+        #{extractionweight,jdbcType=DECIMAL},
+      </if>
+      <if test="extractiontempreture != null" >
+        #{extractiontempreture,jdbcType=VARCHAR},
+      </if>
+      <if test="extractionvelocity != null" >
+        #{extractionvelocity,jdbcType=VARCHAR},
+      </if>
+      <if test="butanolweight != null" >
+        #{butanolweight,jdbcType=VARCHAR},
+      </if>
+      <if test="butanolmaker != null" >
+        #{butanolmaker,jdbcType=VARCHAR},
+      </if>
+      <if test="butanolbatchno != null" >
+        #{butanolbatchno,jdbcType=VARCHAR},
+      </if>
+      <if test="cyclingbutanol != null" >
+        #{cyclingbutanol,jdbcType=DECIMAL},
+      </if>
+      <if test="cyclingstreampressure != null" >
+        #{cyclingstreampressure,jdbcType=FLOAT},
+      </if>
+      <if test="cyclingmaxtempreture != null" >
+        #{cyclingmaxtempreture,jdbcType=VARCHAR},
+      </if>
+      <if test="cyclingminkpa != null" >
+        #{cyclingminkpa,jdbcType=FLOAT},
+      </if>
+      <if test="scraperenrichmentmaxtempreture != null" >
+        #{scraperenrichmentmaxtempreture,jdbcType=VARCHAR},
+      </if>
+      <if test="scraperenrichmentminkpa != null" >
+        #{scraperenrichmentminkpa,jdbcType=FLOAT},
+      </if>
+      <if test="wateradditionweight != null" >
+        #{wateradditionweight,jdbcType=VARCHAR},
+      </if>
+      <if test="wateradditiontimes != null" >
+        #{wateradditiontimes,jdbcType=DECIMAL},
+      </if>
+      <if test="scrapertotletime != null" >
+        #{scrapertotletime,jdbcType=VARCHAR},
+      </if>
+      <if test="concretedensity != null" >
+        #{concretedensity,jdbcType=FLOAT},
+      </if>
+      <if test="wetconcreteweight != null" >
+        #{wetconcreteweight,jdbcType=DECIMAL},
+      </if>
+      <if test="drycustomtempreture != null" >
+        #{drycustomtempreture,jdbcType=VARCHAR},
+      </if>
+      <if test="drymaxtempreture != null" >
+        #{drymaxtempreture,jdbcType=VARCHAR},
+      </if>
+      <if test="drytime != null" >
+        #{drytime,jdbcType=VARCHAR},
+      </if>
+      <if test="drykpa != null" >
+        #{drykpa,jdbcType=FLOAT},
+      </if>
+      <if test="dryconcreteweight != null" >
+        #{dryconcreteweight,jdbcType=FLOAT},
+      </if>
+      <if test="content != null" >
+        #{content,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+</mapper>
