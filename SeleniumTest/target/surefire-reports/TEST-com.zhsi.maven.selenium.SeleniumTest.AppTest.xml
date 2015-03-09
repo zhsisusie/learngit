@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite failures="0" time="51.97" errors="1" skipped="0" tests="1" name="com.zhsi.maven.selenium.SeleniumTest.AppTest">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files (x86)\Java\jdk1.7.0\jre\bin"/>
+    <property name="java.vm.version" value="21.0-b17"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) Client VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="Service Pack 1"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="E:\workspace\SeleniumTest"/>
+    <property name="java.runtime.version" value="1.7.0-b147"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files (x86)\Java\jdk1.7.0\jre\lib\endorsed"/>
+    <property name="os.arch" value="x86"/>
+    <property name="java.io.tmpdir" value="C:\Users\zhsi\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 7"/>
+    <property name="classworlds.conf" value="E:\workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf2643771132513940608.tmp"/>
+    <property name="sun.jnu.encoding" value="GBK"/>
+    <property name="java.library.path" value="C:\Program Files (x86)\Java\jdk1.7.0\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files (x86)/Java/jdk1.7.0/bin/../jre/bin/client;C:/Program Files (x86)/Java/jdk1.7.0/bin/../jre/bin;C:/Program Files (x86)/Java/jdk1.7.0/bin/../jre/lib/i386;F:\app\zhsi\product\11.2.0\dbhome_2\bin;C:\Program Files (x86)\Apache Software Foundation\Tomcat 6.0\lib;C:\Program Files (x86)\Apache Software Foundation\Tomcat 6.0\bin;C:\Program Files (x86)\Java\jdk1.7.0\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\.;C:\Program Files (x86)\Java\jdk1.7.0\bin;C:\Program Files (x86)\MySQL\MySQL Server 5.0\bin;D:\software\;D:\tool\Maven\apache-maven-3.2.5\bin;C:\Users\zhsi\AppData\Roaming\npm;D:\startupPackage\spring-tool-suite-3.6.2.RELEASE-e4.4.1-win32\sts-bundle\sts-3.6.2.RELEASE;;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="51.0"/>
+    <property name="sun.management.compiler" value="HotSpot Client Compiler"/>
+    <property name="os.version" value="6.1"/>
+    <property name="user.home" value="C:\Users\zhsi"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.7"/>
+    <property name="file.encoding" value="GBK"/>
+    <property name="user.name" value="zhsi"/>
+    <property name="java.class.path" value="D:\tool\Maven\apache-maven-3.2.5\boot\plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="1.7"/>
+    <property name="sun.arch.data.model" value="32"/>
+    <property name="java.home" value="C:\Program Files (x86)\Java\jdk1.7.0\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B -s D:\tool\Maven\apache-maven-3.2.5\conf\settings.xml test"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="zh"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.version" value="1.7.0"/>
+    <property name="java.ext.dirs" value="C:\Program Files (x86)\Java\jdk1.7.0\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files (x86)\Java\jdk1.7.0\jre\lib\resources.jar;C:\Program Files (x86)\Java\jdk1.7.0\jre\lib\rt.jar;C:\Program Files (x86)\Java\jdk1.7.0\jre\lib\sunrsasign.jar;C:\Program Files (x86)\Java\jdk1.7.0\jre\lib\jsse.jar;C:\Program Files (x86)\Java\jdk1.7.0\jre\lib\jce.jar;C:\Program Files (x86)\Java\jdk1.7.0\jre\lib\charsets.jar;C:\Program Files (x86)\Java\jdk1.7.0\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="D:\tool\Maven\apache-maven-3.2.5"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86"/>
+  </properties>
+  <testcase time="51.97" classname="com.zhsi.maven.selenium.SeleniumTest.AppTest" name="testSelenium">
+    <error message="Failed to connect to binary FirefoxBinary(C:\Program Files (x86)\Mozilla Firefox\firefox.exe) on port 7055; process output follows: 
+file:fxdriver@googlecode.com visible
+1423045753105	DeferredSave.extensions.json	DEBUG	Save changes
+1423045753105	DeferredSave.extensions.json	DEBUG	Save changes
+1423045753105	addons.xpi	DEBUG	New add-on dict@www.youdao.com installed in winreg-app-user
+1423045753117	addons.xpi-utils	DEBUG	Make addon winreg-app-user:dict@www.youdao.com visible
+1423045753117	DeferredSave.extensions.json	DEBUG	Save changes
+1423045753117	DeferredSave.extensions.json	DEBUG	Save changes
+1423045753117	addons.xpi	DEBUG	New add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} installed in app-global
+1423045753131	addons.xpi-utils	DEBUG	Make addon app-global:{972ce4c6-7e08-4474-a285-3208198ce6fd} visible
+1423045753131	DeferredSave.extensions.json	DEBUG	Save changes
+1423045753131	DeferredSave.extensions.json	DEBUG	Save changes
+1423045753140	addons.xpi	DEBUG	Updating database with changes to installed add-ons
+1423045753140	addons.xpi-utils	DEBUG	Updating add-on states
+1423045753142	addons.xpi-utils	DEBUG	Writing add-ons list
+1423045753149	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
+1423045753150	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
+1423045753151	addons.manager	DEBUG	Registering shutdown blocker for OpenH264Provider
+1423045753152	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
+1423045754944	DeferredSave.extensions.json	DEBUG	Starting timer
+1423045754968	addons.manager	DEBUG	shutdown
+1423045754968	addons.manager	DEBUG	Calling shutdown blocker for XPIProvider
+1423045754968	addons.xpi	DEBUG	shutdown
+1423045754968	addons.xpi-utils	DEBUG	shutdown
+1423045754968	DeferredSave.extensions.json	DEBUG	Flush called while data is dirty
+1423045754969	addons.manager	DEBUG	Calling shutdown blocker for LightweightThemeManager
+1423045754969	addons.manager	DEBUG	Calling shutdown blocker for OpenH264Provider
+1423045754969	addons.manager	DEBUG	Calling shutdown blocker for PluginProvider
+1423045754971	DeferredSave.extensions.json	DEBUG	Starting write
+1423045755152	DeferredSave.extensions.json	DEBUG	Write succeeded
+1423045755153	addons.xpi-utils	DEBUG	XPI Database saved, setting schema version preference to 16
+1423045755153	addons.xpi	DEBUG	Notifying XPI shutdown observers
+1423045755158	addons.manager	DEBUG	Async provider shutdown done
+1423045756137	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/addons/XPIProvider.jsm: [&quot;XPIProvider&quot;]
+1423045756138	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/LightweightThemeManager.jsm: [&quot;LightweightThemeManager&quot;]
+1423045756139	addons.xpi	DEBUG	startup
+1423045756140	addons.xpi	DEBUG	Skipping unavailable install location app-system-local
+1423045756140	addons.xpi	DEBUG	Skipping unavailable install location app-system-share
+1423045756140	addons.xpi	INFO	Mapping {972ce4c6-7e08-4474-a285-3208198ce6fd} to C:\Program Files (x86)\Mozilla Firefox\browser\extensions\{972ce4c6-7e08-4474-a285-3208198ce6fd}
+1423045756141	addons.xpi	INFO	Mapping dict@www.youdao.com to C:\Users\zhsi\AppData\Local\Youdao\Dict\Application\stable\extensions\firefox
+1423045756141	addons.xpi	INFO	Mapping fxdriver@googlecode.com to C:\Users\zhsi\AppData\Local\Temp\anonymous8729595405667106386webdriver-profile\extensions\fxdriver@googlecode.com
+1423045756141	addons.xpi	DEBUG	Ignoring file entry whose name is not a valid add-on ID: C:\Users\zhsi\AppData\Local\Temp\anonymous8729595405667106386webdriver-profile\extensions\webdriver-staging
+1423045756141	addons.xpi	DEBUG	checkForChanges
+1423045756148	addons.xpi	DEBUG	No changes found
+1423045756151	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
+1423045756151	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
+1423045756152	addons.manager	DEBUG	Registering shutdown blocker for OpenH264Provider
+1423045756152	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
+*** Blocklist::_preloadBlocklistFile: blocklist is disabled
+1423045759012	addons.manager	DEBUG	Registering shutdown blocker for &lt;unnamed-provider&gt;
+
+Build info: version: &apos;2.33.0&apos;, revision: &apos;4ecaf82108b2a6cc6f006aae81961236eba93358&apos;, time: &apos;2013-05-22 12:00:17&apos;
+System info: os.name: &apos;Windows 7&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0&apos;
+Driver info: driver.version: FirefoxDriver" type="org.openqa.selenium.WebDriverException">org.openqa.selenium.WebDriverException: Failed to connect to binary FirefoxBinary(C:\Program Files (x86)\Mozilla Firefox\firefox.exe) on port 7055; process output follows: 
+file:fxdriver@googlecode.com visible
+1423045753105	DeferredSave.extensions.json	DEBUG	Save changes
+1423045753105	DeferredSave.extensions.json	DEBUG	Save changes
+1423045753105	addons.xpi	DEBUG	New add-on dict@www.youdao.com installed in winreg-app-user
+1423045753117	addons.xpi-utils	DEBUG	Make addon winreg-app-user:dict@www.youdao.com visible
+1423045753117	DeferredSave.extensions.json	DEBUG	Save changes
+1423045753117	DeferredSave.extensions.json	DEBUG	Save changes
+1423045753117	addons.xpi	DEBUG	New add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} installed in app-global
+1423045753131	addons.xpi-utils	DEBUG	Make addon app-global:{972ce4c6-7e08-4474-a285-3208198ce6fd} visible
+1423045753131	DeferredSave.extensions.json	DEBUG	Save changes
+1423045753131	DeferredSave.extensions.json	DEBUG	Save changes
+1423045753140	addons.xpi	DEBUG	Updating database with changes to installed add-ons
+1423045753140	addons.xpi-utils	DEBUG	Updating add-on states
+1423045753142	addons.xpi-utils	DEBUG	Writing add-ons list
+1423045753149	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
+1423045753150	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
+1423045753151	addons.manager	DEBUG	Registering shutdown blocker for OpenH264Provider
+1423045753152	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
+1423045754944	DeferredSave.extensions.json	DEBUG	Starting timer
+1423045754968	addons.manager	DEBUG	shutdown
+1423045754968	addons.manager	DEBUG	Calling shutdown blocker for XPIProvider
+1423045754968	addons.xpi	DEBUG	shutdown
+1423045754968	addons.xpi-utils	DEBUG	shutdown
+1423045754968	DeferredSave.extensions.json	DEBUG	Flush called while data is dirty
+1423045754969	addons.manager	DEBUG	Calling shutdown blocker for LightweightThemeManager
+1423045754969	addons.manager	DEBUG	Calling shutdown blocker for OpenH264Provider
+1423045754969	addons.manager	DEBUG	Calling shutdown blocker for PluginProvider
+1423045754971	DeferredSave.extensions.json	DEBUG	Starting write
+1423045755152	DeferredSave.extensions.json	DEBUG	Write succeeded
+1423045755153	addons.xpi-utils	DEBUG	XPI Database saved, setting schema version preference to 16
+1423045755153	addons.xpi	DEBUG	Notifying XPI shutdown observers
+1423045755158	addons.manager	DEBUG	Async provider shutdown done
+1423045756137	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/addons/XPIProvider.jsm: [&quot;XPIProvider&quot;]
+1423045756138	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/LightweightThemeManager.jsm: [&quot;LightweightThemeManager&quot;]
+1423045756139	addons.xpi	DEBUG	startup
+1423045756140	addons.xpi	DEBUG	Skipping unavailable install location app-system-local
+1423045756140	addons.xpi	DEBUG	Skipping unavailable install location app-system-share
+1423045756140	addons.xpi	INFO	Mapping {972ce4c6-7e08-4474-a285-3208198ce6fd} to C:\Program Files (x86)\Mozilla Firefox\browser\extensions\{972ce4c6-7e08-4474-a285-3208198ce6fd}
+1423045756141	addons.xpi	INFO	Mapping dict@www.youdao.com to C:\Users\zhsi\AppData\Local\Youdao\Dict\Application\stable\extensions\firefox
+1423045756141	addons.xpi	INFO	Mapping fxdriver@googlecode.com to C:\Users\zhsi\AppData\Local\Temp\anonymous8729595405667106386webdriver-profile\extensions\fxdriver@googlecode.com
+1423045756141	addons.xpi	DEBUG	Ignoring file entry whose name is not a valid add-on ID: C:\Users\zhsi\AppData\Local\Temp\anonymous8729595405667106386webdriver-profile\extensions\webdriver-staging
+1423045756141	addons.xpi	DEBUG	checkForChanges
+1423045756148	addons.xpi	DEBUG	No changes found
+1423045756151	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
+1423045756151	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
+1423045756152	addons.manager	DEBUG	Registering shutdown blocker for OpenH264Provider
+1423045756152	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
+*** Blocklist::_preloadBlocklistFile: blocklist is disabled
+1423045759012	addons.manager	DEBUG	Registering shutdown blocker for &lt;unnamed-provider&gt;
+
+Build info: version: &apos;2.33.0&apos;, revision: &apos;4ecaf82108b2a6cc6f006aae81961236eba93358&apos;, time: &apos;2013-05-22 12:00:17&apos;
+System info: os.name: &apos;Windows 7&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0&apos;
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:118)
+	at org.openqa.selenium.firefox.FirefoxDriver.startClient(FirefoxDriver.java:244)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:110)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:188)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:183)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:179)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:92)
+	at com.zhsi.maven.selenium.SeleniumTest.AppTest.testSelenium(AppTest.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:76)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.openqa.selenium.firefox.NotConnectedException: Unable to connect to host 127.0.0.1 on port 7055 after 45000 ms. Firefox console output:
+file:fxdriver@googlecode.com visible
+1423045753105	DeferredSave.extensions.json	DEBUG	Save changes
+1423045753105	DeferredSave.extensions.json	DEBUG	Save changes
+1423045753105	addons.xpi	DEBUG	New add-on dict@www.youdao.com installed in winreg-app-user
+1423045753117	addons.xpi-utils	DEBUG	Make addon winreg-app-user:dict@www.youdao.com visible
+1423045753117	DeferredSave.extensions.json	DEBUG	Save changes
+1423045753117	DeferredSave.extensions.json	DEBUG	Save changes
+1423045753117	addons.xpi	DEBUG	New add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} installed in app-global
+1423045753131	addons.xpi-utils	DEBUG	Make addon app-global:{972ce4c6-7e08-4474-a285-3208198ce6fd} visible
+1423045753131	DeferredSave.extensions.json	DEBUG	Save changes
+1423045753131	DeferredSave.extensions.json	DEBUG	Save changes
+1423045753140	addons.xpi	DEBUG	Updating database with changes to installed add-ons
+1423045753140	addons.xpi-utils	DEBUG	Updating add-on states
+1423045753142	addons.xpi-utils	DEBUG	Writing add-ons list
+1423045753149	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
+1423045753150	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
+1423045753151	addons.manager	DEBUG	Registering shutdown blocker for OpenH264Provider
+1423045753152	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
+1423045754944	DeferredSave.extensions.json	DEBUG	Starting timer
+1423045754968	addons.manager	DEBUG	shutdown
+1423045754968	addons.manager	DEBUG	Calling shutdown blocker for XPIProvider
+1423045754968	addons.xpi	DEBUG	shutdown
+1423045754968	addons.xpi-utils	DEBUG	shutdown
+1423045754968	DeferredSave.extensions.json	DEBUG	Flush called while data is dirty
+1423045754969	addons.manager	DEBUG	Calling shutdown blocker for LightweightThemeManager
+1423045754969	addons.manager	DEBUG	Calling shutdown blocker for OpenH264Provider
+1423045754969	addons.manager	DEBUG	Calling shutdown blocker for PluginProvider
+1423045754971	DeferredSave.extensions.json	DEBUG	Starting write
+1423045755152	DeferredSave.extensions.json	DEBUG	Write succeeded
+1423045755153	addons.xpi-utils	DEBUG	XPI Database saved, setting schema version preference to 16
+1423045755153	addons.xpi	DEBUG	Notifying XPI shutdown observers
+1423045755158	addons.manager	DEBUG	Async provider shutdown done
+1423045756137	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/addons/XPIProvider.jsm: [&quot;XPIProvider&quot;]
+1423045756138	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/LightweightThemeManager.jsm: [&quot;LightweightThemeManager&quot;]
+1423045756139	addons.xpi	DEBUG	startup
+1423045756140	addons.xpi	DEBUG	Skipping unavailable install location app-system-local
+1423045756140	addons.xpi	DEBUG	Skipping unavailable install location app-system-share
+1423045756140	addons.xpi	INFO	Mapping {972ce4c6-7e08-4474-a285-3208198ce6fd} to C:\Program Files (x86)\Mozilla Firefox\browser\extensions\{972ce4c6-7e08-4474-a285-3208198ce6fd}
+1423045756141	addons.xpi	INFO	Mapping dict@www.youdao.com to C:\Users\zhsi\AppData\Local\Youdao\Dict\Application\stable\extensions\firefox
+1423045756141	addons.xpi	INFO	Mapping fxdriver@googlecode.com to C:\Users\zhsi\AppData\Local\Temp\anonymous8729595405667106386webdriver-profile\extensions\fxdriver@googlecode.com
+1423045756141	addons.xpi	DEBUG	Ignoring file entry whose name is not a valid add-on ID: C:\Users\zhsi\AppData\Local\Temp\anonymous8729595405667106386webdriver-profile\extensions\webdriver-staging
+1423045756141	addons.xpi	DEBUG	checkForChanges
+1423045756148	addons.xpi	DEBUG	No changes found
+1423045756151	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
+1423045756151	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
+1423045756152	addons.manager	DEBUG	Registering shutdown blocker for OpenH264Provider
+1423045756152	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
+*** Blocklist::_preloadBlocklistFile: blocklist is disabled
+1423045759012	addons.manager	DEBUG	Registering shutdown blocker for &lt;unnamed-provider&gt;
+
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:106)
+	... 35 more
+</error>
+    <system-err>org.openqa.selenium.firefox.NotConnectedException: Unable to connect to host 127.0.0.1 on port 7055 after 45000 ms. Firefox console output:
+file:fxdriver@googlecode.com visible
+1423045753105	DeferredSave.extensions.json	DEBUG	Save changes
+1423045753105	DeferredSave.extensions.json	DEBUG	Save changes
+1423045753105	addons.xpi	DEBUG	New add-on dict@www.youdao.com installed in winreg-app-user
+1423045753117	addons.xpi-utils	DEBUG	Make addon winreg-app-user:dict@www.youdao.com visible
+1423045753117	DeferredSave.extensions.json	DEBUG	Save changes
+1423045753117	DeferredSave.extensions.json	DEBUG	Save changes
+1423045753117	addons.xpi	DEBUG	New add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} installed in app-global
+1423045753131	addons.xpi-utils	DEBUG	Make addon app-global:{972ce4c6-7e08-4474-a285-3208198ce6fd} visible
+1423045753131	DeferredSave.extensions.json	DEBUG	Save changes
+1423045753131	DeferredSave.extensions.json	DEBUG	Save changes
+1423045753140	addons.xpi	DEBUG	Updating database with changes to installed add-ons
+1423045753140	addons.xpi-utils	DEBUG	Updating add-on states
+1423045753142	addons.xpi-utils	DEBUG	Writing add-ons list
+1423045753149	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
+1423045753150	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
+1423045753151	addons.manager	DEBUG	Registering shutdown blocker for OpenH264Provider
+1423045753152	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
+1423045754944	DeferredSave.extensions.json	DEBUG	Starting timer
+1423045754968	addons.manager	DEBUG	shutdown
+1423045754968	addons.manager	DEBUG	Calling shutdown blocker for XPIProvider
+1423045754968	addons.xpi	DEBUG	shutdown
+1423045754968	addons.xpi-utils	DEBUG	shutdown
+1423045754968	DeferredSave.extensions.json	DEBUG	Flush called while data is dirty
+1423045754969	addons.manager	DEBUG	Calling shutdown blocker for LightweightThemeManager
+1423045754969	addons.manager	DEBUG	Calling shutdown blocker for OpenH264Provider
+1423045754969	addons.manager	DEBUG	Calling shutdown blocker for PluginProvider
+1423045754971	DeferredSave.extensions.json	DEBUG	Starting write
+1423045755152	DeferredSave.extensions.json	DEBUG	Write succeeded
+1423045755153	addons.xpi-utils	DEBUG	XPI Database saved, setting schema version preference to 16
+1423045755153	addons.xpi	DEBUG	Notifying XPI shutdown observers
+1423045755158	addons.manager	DEBUG	Async provider shutdown done
+1423045756137	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/addons/XPIProvider.jsm: [&quot;XPIProvider&quot;]
+1423045756138	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/LightweightThemeManager.jsm: [&quot;LightweightThemeManager&quot;]
+1423045756139	addons.xpi	DEBUG	startup
+1423045756140	addons.xpi	DEBUG	Skipping unavailable install location app-system-local
+1423045756140	addons.xpi	DEBUG	Skipping unavailable install location app-system-share
+1423045756140	addons.xpi	INFO	Mapping {972ce4c6-7e08-4474-a285-3208198ce6fd} to C:\Program Files (x86)\Mozilla Firefox\browser\extensions\{972ce4c6-7e08-4474-a285-3208198ce6fd}
+1423045756141	addons.xpi	INFO	Mapping dict@www.youdao.com to C:\Users\zhsi\AppData\Local\Youdao\Dict\Application\stable\extensions\firefox
+1423045756141	addons.xpi	INFO	Mapping fxdriver@googlecode.com to C:\Users\zhsi\AppData\Local\Temp\anonymous8729595405667106386webdriver-profile\extensions\fxdriver@googlecode.com
+1423045756141	addons.xpi	DEBUG	Ignoring file entry whose name is not a valid add-on ID: C:\Users\zhsi\AppData\Local\Temp\anonymous8729595405667106386webdriver-profile\extensions\webdriver-staging
+1423045756141	addons.xpi	DEBUG	checkForChanges
+1423045756148	addons.xpi	DEBUG	No changes found
+1423045756151	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
+1423045756151	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
+1423045756152	addons.manager	DEBUG	Registering shutdown blocker for OpenH264Provider
+1423045756152	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
+*** Blocklist::_preloadBlocklistFile: blocklist is disabled
+1423045759012	addons.manager	DEBUG	Registering shutdown blocker for &lt;unnamed-provider&gt;
+
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:106)
+	at org.openqa.selenium.firefox.FirefoxDriver.startClient(FirefoxDriver.java:244)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:110)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:188)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:183)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:179)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:92)
+	at com.zhsi.maven.selenium.SeleniumTest.AppTest.testSelenium(AppTest.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:76)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</system-err>
+  </testcase>
+</testsuite>
