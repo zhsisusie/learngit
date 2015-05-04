@@ -1,0 +1,537 @@
+@CHARSET "UTF-8";
+
+* {
+	padding: 0;
+	margin: 0;
+	outline: 0
+}
+
+html {
+	overflow-y: scroll;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	height: 100%;
+	min-width: 1000px;
+	background-color: #e4e4e4
+}
+
+body,input,textarea,select,button {
+	font: 12px/1.667 'Helvetica Neue', Tahoma;
+	color: #455469
+}
+select{
+	width:100px;
+	height:22px;
+}
+input,textarea,table {
+	font-size: 1em;
+	font-family: inherit
+}
+/*相对定位只是移动了表现方式，其所占用的空间还是在原来的文档流中*/
+body {
+	position: relative;
+	height: 100%
+}
+
+/*border-collapse: collapse设置相邻的边框线设置为一条*/
+table {
+	border-collapse: collapse;
+	border-spacing: 0
+}
+
+img,fieldset,hr,iframe,button {
+	border: 0
+}
+
+img,.img {
+	display: inline-block; /*行内块*/
+	background: no-repeat;
+	vertical-align: top
+}
+
+form,.form {
+	position: relative;
+	display: block;
+	zoom: 1;
+}
+
+/*列表项目统一样式，每个列表前缀符号*/
+li {
+	list-style: none
+}
+/*定义头*/
+dt {
+	font-size: 16px;
+	font-family: "微软雅黑";
+	color: #3A8B9B;
+}
+dd{
+	line-height: 20px;
+	margin-top: 10px;
+}
+/*盒样式的统一，W3C盒模型规定长宽属性是盒内内容的长宽，不包含border和padding，但是IE的标准是长宽属性为边框的长宽。-moz-box-sizing或-webkit-box-sizing分别设置火狐或Safari和WebKit符合W3C标准*/
+button,.btn {
+	overflow: visible;
+	width: auto;
+	padding: 0;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+	text-indent: 0;
+	outline: 0;
+	cursor: pointer;
+	border: 0;
+	background: none
+}
+
+.orange-btn {
+	font-family: "微软雅黑";
+	display: inline-block;
+	width: 100%;
+	height: 45px;
+	line-height: 45px;
+	text-align: center;
+	font-size: 18px;
+	color: #fff !important;
+	background: url('../icons/btn_bg_1.jpg') repeat-x;
+}
+
+/*按钮内边框，火狐浏览器，IE浏览器默认会显示按钮内边框和padding*/
+button::-moz-focus-inner,input::-moz-focus-inner {
+	padding: 0;
+	border: 0
+}
+
+/*上下标*/
+sup,sub {
+	vertical-align: baseline
+}
+
+/*引用的样式blockquote是段引用，q是行内引用，quotes定义各级引号*/
+blockquote,q {
+	quotes: none
+}
+
+/*伪元素，声明了content属性，而且此时使用了空字符串。content属性是必须的而且应该经常被应用。否则，伪元素无论如何都无法正常工作。*/
+blockquote:before,blockquote:after,q:before,q:after {
+	content: '';
+	content: none
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-size: 1em;
+	font-weight: normal
+}
+
+i,cite,em,var,dfn,address {
+	font-style: normal
+}
+
+b,strong {
+	font-weight: normal
+}
+
+textarea {
+	resize: vertical
+}
+
+
+.txt {
+	height: 19px;
+	line-height: 19px !important;
+	padding: 3px 6px 2px;
+	border: 1px solid #e8e4d8;
+	border-radius: 3px
+}
+
+.txt,select,textarea {
+	border: 1px solid #d8d8d8;
+	border-radius: 3px;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	-webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+	font-family: inherit
+}
+/*输入框仅允许选中文本，只支持ff*/
+input,textarea {
+	-moz-user-select: text
+}
+
+/*对象，画布，插件*/
+object,canvas,embed {
+	display: block
+}
+
+a,label {
+	cursor: pointer
+}
+
+a {
+	color: #455469;
+	text-decoration: none
+}
+
+a:hover {
+	text-decoration: underline
+}
+
+.noSelect {
+	user-select: none;
+	-moz-user-select: -moz-none;
+	-webkit-user-select: none
+}
+
+.noDis {
+	display: none !important;
+	opacity: 0 !important
+}
+.dis{
+	display: block;
+	opacity: 100 !important
+}
+/*transition:property duration timing-function delay;动画过度效果*/
+.noVis {
+	visibility: hidden !important;
+	opacity: 0 !important;
+	filter: alpha(opacity =   0);
+	-webkit-transition: all ease-out .3s;
+	transition: all ease-out .3s
+}
+
+.hasTransition {
+	-webkit-transition: all ease-out .2s;
+	transition: all ease-out .2s
+}
+
+.noEffect {
+	-webkit-transition: none !important;
+	transition: none !important
+}
+
+/*顶部用户信息等*/
+.Tray {
+	z-index: 7;
+	top: 0;
+	position: fixed;
+	width: 100%;
+	height: 39px;
+	background: #fff;
+	color: #3A3F42
+}
+
+.tray,.toolbar,.bdy {
+	position: relative;
+	width: 1000px;
+	min-height: 100%;
+	margin-left: auto;
+	margin-right: auto
+}
+
+.Tray a {
+	color: #3A3F42
+}
+
+.logo {
+	z-index: 3;
+	position: relative;
+	overflow: hidden;
+	display: block;
+	width: 90px;
+	height: 39px;
+	margin: 0 0 0;
+	text-indent: -15em;
+	background: url(../icons/logo.png) no-repeat center
+}
+
+.nav {
+	height: 39px;
+	line-height: 39px;
+	margin: -39px 0 0 90px;
+}
+
+.nav>li {
+	z-index: 2;
+	position: relative;
+	display: inline-block;
+	height: 100%;
+	vertical-align: top
+}
+
+.nav>li>a {
+	display: block;
+	height: 100%;
+	padding: 0 12px
+}
+
+.nav2 {
+	top: 5px;
+	position: relative;
+	height: 29px;
+	line-height: 29px;
+	padding: 0 12px;
+	margin: -39px 0 0 auto;
+	text-align: right
+}
+
+.nav2>li {
+	position: relative;
+	display: inline-block;
+	height: 100%;
+	margin-left: 8px;
+	vertical-align: top
+}
+
+.nav2>li:after {
+	content: '';
+	display: inline-block;
+	width: 1px;
+	height: 12px;
+	margin: 0 0 .2em 8px;
+	vertical-align: middle;
+	background: #D9DADA
+}
+
+.nav2>li:last-child:after {
+	display: none
+}
+
+.nav2>li>a {
+	display: inline-block;
+	padding: 0
+}
+
+.Toolbar {
+	z-index: 6;
+	top: 39px;
+	position: fixed;
+	width: 100%;
+	height: 68px;
+	white-space: nowrap;
+	border-bottom: 1px solid #fff;
+	background: #262629
+}
+
+.Toolbar2 {
+	border-bottom: 0;
+	background-color: #64b9c9;
+}
+/*工具栏左列：各个工具栏导航*/
+.tools {
+	height: 68px;
+	margin: 0 0 -68px
+}
+
+.tool {
+	position: relative;
+	display: inline-block;
+	height: 68px;
+	font-family: \5fae\8f6f\96c5\9ed1, \9ed1\4f53;
+	line-height: 68px;
+	vertical-align: top;
+	background: none
+}
+
+.tool>a,.tool>button {
+	display: block;
+	padding: 0 20px;
+	height: 68px;
+	font-size: 24px;
+	color: #fff;
+	-webkit-transition: background 0.2s;
+	transition: background 0.2s
+}
+
+.tool>button:hover {
+	z-index: 1;
+	margin-right: -1px;
+	padding-right: 21px;
+	background: #8ad2df;
+	text-decoration: none;
+}
+
+/*.tool>button:active {
+	background: #1D1D20
+}*/
+/*小icon的全局设置*/
+.i {
+	width: 32px;
+	height: 32px;
+	overflow: hidden;
+	display: inline-block;
+	background: url(../icons/icons.png) no-repeat -100%;
+	margin: 0 0 .25em;
+	line-height: 0 !important;
+	text-align: left;
+	vertical-align: middle;
+	text-decoration: none !important;
+	-webkit-text-size-adjust: none
+}
+
+.i1 {
+	background: url(../icons/dataanalysis.png) no-repeat center
+}
+/*工具栏右：搜索条*/
+.tools2 {
+	height: 68px;
+	text-align: right
+}
+
+.toolB {
+	width: 180px;
+	text-align: center;
+	font-size: 24px;
+	background: #64b9c9;
+	color: #fff
+}
+
+.Toolbar2 .toolB form {
+	text-align: left;
+	position: relative;
+	height: 68px;
+	padding-top: 23px;
+}
+
+.Toolbar2 .toolB .searchBtn {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background: url(../icons/searchBtn.png) no-repeat center;
+	left: 12px;
+	top: 28%;
+}
+
+.Toolbar2 .toolB .txt {
+	width: 93px;
+	padding: 3px 30px 3px 38px;
+	border: none;
+	background: #36808e;
+	border-radius: 15px;
+	color: #fff;
+	box-shadow: 0 1px #5eacbb;
+	border-top: 1px solid #36808e;
+	font-size: 12px
+}
+
+#Bdy {
+	min-height: 100%;
+	margin: auto;
+	background: #fff;
+	width: 1000px
+}
+
+.bdy:before {
+	visibility: hidden;
+	float: left;
+	width: 100%;
+	min-height: 110px;
+	height: 100%;
+	display: block;
+	content: '';
+	background: transparent no-repeat center;
+	opacity: 0;
+	-webkit-transition: all .2s;
+	transition: all .2s
+}
+
+.bdy:after {
+	display: block;
+	content: '';
+	clear: both
+}
+
+.main {
+	float: left;
+	width: 100%;
+}
+
+div.intro {
+	padding: 6px 20px 0 20px;
+}
+
+.file-gnm {
+	position: relative;
+	padding: 1em 0;
+	border-bottom: 1px dashed #DCDCDC;
+}
+
+.file-gnm:before {
+	padding-left: 30px;
+}
+
+.file-gnm:before {
+	content: attr(csstxt);
+}
+
+.iB {
+	vertical-align: top;
+	width: 25px;
+	height: 25px;
+}
+
+.i2 {
+	background-position: -25px 0;
+}
+
+.file-gnm>.i {
+	top: 16px;
+	left: 0;
+	position: absolute;
+}
+
+.w200 {
+	width: 200px;
+}
+.mt-50{
+	margin-top:-50px;
+}
+.floatRight{
+	float:right;
+}
+
+#containerAverage1:before{
+	visibility: hidden;
+	float: left;
+	width: 100%;
+	min-height: 50px;
+	display: block;
+	content: '';
+	background: transparent no-repeat center;
+	opacity: 0;
+	-webkit-transition: all .2s;
+	transition: all .2s
+	
+}
+#containerAverage1:after{
+	visibility: hidden;
+	float: left;
+	width: 100%;
+	min-height: 50px;
+	display: block;
+	content: '';
+	background: transparent no-repeat center;
+	opacity: 0;
+	-webkit-transition: all .2s;
+	transition: all .2s
+}
+#containerAverage2:after{
+	visibility: hidden;
+	float: left;
+	width: 100%;
+	min-height: 50px;
+	display: block;
+	content: '';
+	background: transparent no-repeat center;
+	opacity: 0;
+	-webkit-transition: all .2s;
+	transition: all .2s
+}
+.container{
+	min-width:700px;
+	height:500px;
+	max-width:800px;
+	text-align: center;
+	margin: auto;
+	margin-top:30px;
+	margin-bottom:50px;
+	
+}
