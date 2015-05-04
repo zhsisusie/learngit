@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context" 
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:util="http://www.springframework.org/schema/util"  
+
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-2.5.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+        http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util-2.5.xsd">
+   
+	<!-- <bean id="userService" class="com.ssm.www.service.impl.IUserServiceImpl"> -->
+	<!-- 对service包所有注解扫描，自动注入 -->
+	<!-- 引入jdbc配置文件 -->
+	<context:property-placeholder location="classpath:jdbc.properties" />
+	
+	<!-- <util:properties id="settings" location="classpath:picPath.properties"></util:properties> -->
+	
+	<!-- <bean id="settings" class="org.springframework.beans.factory.config.PropertiesFactoryBean" scope="step">
+	<property name="location" value="classpath:picPath.properties"></property>
+	</bean> -->
+	<!-- <context:annotation-config /> -->
+	<!-- 方式二: 命名空间<context:annotation-config />
+
+<context:annotationconfig /> 将隐式地向Spring 容器注册AutowiredAnnotationBeanPostProcessor 、
+CommonAnnotationBeanPostProcessor 、 PersistenceAnnotationBeanPostProcessor 以及RequiredAnnotationBeanPostProcessor 这4 个BeanPostProcessor 。 -->
+	<context:component-scan base-package="com.chatRoom.service.impl"></context:component-scan>
+</beans>
+        

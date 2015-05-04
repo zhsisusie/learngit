@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<!-- classPathEnttry:数据库的JDBC驱动的jar包地址 -->
+	<!-- 记住路径都要换成绝对路径，不然一直出错 -->
+	<classPathEntry location="E:\workspace\Login_ssm_mav_waterfull\src\main\resources\ojdbc6.jar" />
+	<context id="DB2Tables" targetRuntime="MyBatis3">
+		<commentGenerator>
+			<property name="suppressDate" value="true" />
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+
+		<!-- 数据库链接的信息：驱动类、链接地址、用户名、密码 -->
+		<jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver"
+			connectionURL="jdbc:oracle:thin:@localhost:1521:orcl" userId="scott"
+			password="123"></jdbcConnection>
+		<javaTypeResolver>
+			<property name="forceBigDecimal" value="false"></property>
+		</javaTypeResolver>
+		<!-- 生成模型的包名和位置 ,即model的位置 -->
+		<javaModelGenerator targetPackage="com.chatRoom.model"
+			targetProject="E:\workspace\Login_ssm_mav_waterfull\src\main\java">
+			<property name="enableSubPackages" value="true" />
+		</javaModelGenerator>
+		<!-- 生成映射文件的包名和位置 -->
+		<sqlMapGenerator targetPackage="com.chatRoom.mapping"
+			targetProject="E:\workspace\Login_ssm_mav_waterfull\src\main\java">
+			<property name="enableSubpackages" value="true" />
+		</sqlMapGenerator>
+		<!-- 生成DAO的包名和位置 -->
+		<javaClientGenerator targetPackage="com.chatRoom.dao"
+			type="XMLMAPPER" targetProject="E:\workspace\Login_ssm_mav_waterfull\src\main\java">
+			<property name="enbaleSubPackage" value="true" />
+		</javaClientGenerator>
+
+		<table tableName="PHOTO" domainObjectName="Photo"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+	</context>
+</generatorConfiguration>

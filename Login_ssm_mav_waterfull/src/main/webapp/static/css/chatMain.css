@@ -1,0 +1,69 @@
+@CHARSET "UTF-8";
+body{
+	font-size:11px
+}
+h3{
+	margin:0px
+}
+.divShow{
+	border:solid 1px #ccc;
+	height:300px;
+	padding:5px;
+	font-size:12px;
+	overfolw-y:scroll;
+}
+#divMain{
+	border:solid 5px #ccc
+}
+#divMain .divTop{
+	padding:10px;
+}
+#divMain .divTop .divL{
+	float:left;
+	width:20%;
+}
+#divMain .divTop .divR{
+	float:right;/*浮动*/
+	width:20%；
+}
+#divMain .divBot{
+	clear:both;/* 属性规定元素的哪一侧不允许其他浮动元素*/
+	padding:10px;
+}
+#divMain .divBot .pb{
+	padding-left:3px;/* padding 为内边距*/
+}
+#divMain .divBot .pl{
+	padding-left:12px;
+}
+#divMain .divBot .pt{
+	padding-top:3px;
+	color:#555;
+}
+.clsTip{
+	position:absolute;
+	width:160px;
+	text-align:center;
+	font-size:13px;
+	border:solid 1px #cc3300;
+	margin-top:5px;
+	padding:2px;
+	margin-bottom:5px;
+	background-color:#ffe0a3;
+	display:none;/*display 属性规定元素应该生成的框的类型。*/
+}
+.btn{
+	border:solid 1px #666;
+	padding:2px;
+	width:135px;
+	height:54px;
+	font-size:16px;
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#ffffff,  
+    EndColorStr=#ECE9D8) ; 
+}
+.txt{
+	border:#666 1px solid;
+	padding:2px;
+	margin-right:3px;
+}
+
